@@ -73,9 +73,21 @@
         <input type="number" name="pizzaNumber" id="pizzaNumber" class="form-control"
             placeholder="-Enter the quantity-">
 
-        <button class="btn btn-danger" onclick="pick()">I WILL PICK</button>
-        <button class="btn btn-danger" onclick="deliver()">I NEED DELIVERY</button>
+        <button class="btn btn-danger" onclick="pick()" id="pick" value="200">I WILL PICK</button>
+        <button class="btn btn-danger" onclick="deliver()" id="deliver" value="0">I NEED DELIVERY</button>
 
+    </div>
+
+    <div id="summary">
+        <table>
+            <tr>
+                <td><span id="itemQuantity"></span></td>
+                <td><span id="itemSize"></span></td>
+                <td><span id="itemCrust"></span></td>
+                <td><span id="itemTopping"></span></td>
+            </tr>
+        </table>
+        <button value="checkout" class="btn btn-success">Checkout</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
