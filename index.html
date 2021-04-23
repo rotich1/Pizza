@@ -23,15 +23,11 @@
 <body>
     <div class="navbar">
         <p>My Pizza Place</p>
-        <ul class="d-flex flex-row">
-            <li>Home</li>
-            <li>Make Order</li>
-        </ul>
     </div>
-    <div class="container landing">
+    <div class="container landing" id="landing">
         <h1>Pizza Pride</h1>
         <h3>Family, Friends $ Pizza</h3>
-        <h4 class="bg-order">Make an order now</h4>
+        <h4 id="bg-order">Make an order now</h4>
         <div class="animate">
             <iframe src="https://giphy.com/embed/o3vJeahO5sZOA0IlB0" width="280" height="280" frameBorder="0"
                 class="giphy-embed" allowFullScreen></iframe>
@@ -73,21 +69,28 @@
         <input type="number" name="pizzaNumber" id="pizzaNumber" class="form-control"
             placeholder="-Enter the quantity-">
 
-        <button class="btn btn-danger" onclick="pick()" id="pick" value="200">I WILL PICK</button>
-        <button class="btn btn-danger" onclick="deliver()" id="deliver" value="0">I NEED DELIVERY</button>
+        <button class="btn btn-danger submit" onclick="pick()" id="pick" value="0">I WILL PICK</button>
+        <button class="btn btn-danger submit" onclick="deliver()" id="deliver" value="200">I NEED DELIVERY</button>
 
     </div>
 
-    <div id="summary">
+    <div id="summary" class="container">
         <table>
-            <tr>
-                <td><span id="itemQuantity"></span></td>
-                <td><span id="itemSize"></span></td>
-                <td><span id="itemCrust"></span></td>
-                <td><span id="itemTopping"></span></td>
+            <tr class="tableHeader">
+                <th>Quantity</th>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Topping</th>
+                <th><strong>Total</strong></th>
+            </tr>
+            <td><span id="itemQuantity"></span></td>
+            <td><span id="itemSize"></span></td>
+            <td><span id="itemCrust"></span></td>
+            <td><span id="itemTopping"></span></td>
+            <td><span id="totalValue"></span></td>
             </tr>
         </table>
-        <button value="checkout" class="btn btn-success">Checkout</button>
+        <button value="checkout" class="btn btn-success checkOut">Checkout</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
