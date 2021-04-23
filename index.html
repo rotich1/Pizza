@@ -35,80 +35,89 @@
         </div>
     </div>
 
-    <div class="order-form container">
-        <select type="text" name="size" class="form-select" id="pizza-size">
-            <option value="hint">-Select the size-</option>
-            <option value="750">Large</option>
-            <option value="500">Medium</option>
-            <option value="300">Small</option>
-        </select>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
 
-        <select type="text" name="size" class="form-select" id="pizza-crust">
-            <option value="hint">-Select the crust-</option>
-            <option value="70">Chicago Deep Dish</option>
-            <option value="50">Neapolitan</option>
-            <option value="70">NY Style Pizza</option>
-            <option value="40">Pineapple</option>
-            <option value="20">Spinach</option>
-        </select>
+                <div class="order-form">
+                    <select type="text" name="size" class="form-select" id="pizza-size">
+                        <option value="hint">-Select the size-</option>
+                        <option value="750">Large</option>
+                        <option value="500">Medium</option>
+                        <option value="300">Small</option>
+                    </select>
 
-        <select type="text" name="size" class="form-select" id="pizza-toppings">
-            <option value="hint">-Select you preferred topping-</option>
-            <option value="100">Cheese-Stuffed</option>
-            <option value="80">Pizza Bagels</option>
-            <option value="40">Flatbread</option>
-            <option value="40">Thin Crust</option>
-            <option value="50">Sicilian Style</option>
-            <option value="70">Chicago Deep Dish</option>
-            <option value="50">Neapolitan</option>
-            <option value="70">NY Style Pizza</option>
-            <option value="40">Pineapple</option>
-            <option value="20">Spinach</option>
-        </select>
+                    <select type="text" name="size" class="form-select" id="pizza-crust">
+                        <option value="hint">-Select the crust-</option>
+                        <option value="70">Chicago Deep Dish</option>
+                        <option value="50">Neapolitan</option>
+                        <option value="70">NY Style Pizza</option>
+                        <option value="40">Pineapple</option>
+                        <option value="20">Spinach</option>
+                    </select>
 
-        <input type="number" name="pizzaNumber" id="pizzaNumber" class="form-control"
-            placeholder="-Enter the quantity-">
+                    <select type="text" name="size" class="form-select" id="pizza-toppings">
+                        <option value="hint">-Select you preferred topping-</option>
+                        <option value="100">Cheese-Stuffed</option>
+                        <option value="80">Pizza Bagels</option>
+                        <option value="40">Flatbread</option>
+                        <option value="40">Thin Crust</option>
+                        <option value="50">Sicilian Style</option>
+                        <option value="70">Chicago Deep Dish</option>
+                        <option value="50">Neapolitan</option>
+                        <option value="70">NY Style Pizza</option>
+                        <option value="40">Pineapple</option>
+                        <option value="20">Spinach</option>
+                    </select>
 
-        <button class="btn btn-danger submit" onclick="pick()" id="pick" value="0">I WILL PICK</button>
-        <button class="btn btn-danger submit" onclick="deliver()" id="deliver" value="200">I NEED DELIVERY</button>
+                    <input type="number" name="pizzaNumber" id="pizzaNumber" class="form-control"
+                        placeholder="-Enter the quantity-">
 
-    </div>
+                    <button class="btn btn-danger submit" id="pick" value="0">I WILL PICK</button>
+                    <button class="btn btn-danger submit" id="deliver" value="200">I NEED DELIVERY</button>
 
-    <div id="summary" class="container">
-        <table>
-            <tr class="tableHeader">
-                <th>Quantity</th>
-                <th>Size</th>
-                <th>Crust</th>
-                <th>Topping</th>
-                <th><strong>Total</strong></th>
-            </tr>
-            <td><span id="itemQuantity"></span></td>
-            <td><span id="itemSize"></span></td>
-            <td><span id="itemCrust"></span></td>
-            <td><span id="itemTopping"></span></td>
-            <td><span id="totalValue"></span></td>
-            </tr>
-        </table>
-        <button value="checkout" class="btn btn-success checkOut">Checkout</button>
-    </div>
+                </div>
 
-    <div class="receipt container">
-        <table>
-            <tr class="tableHeader">
-                <th>Quantity</th>
-                <th>Size</th>
-                <th>Crust</th>
-                <th>Topping</th>
-                <th><strong>Total</strong></th>
-            </tr>
-            <td><span id="quantity"></span></td>
-            <td><span id="size"></span></td>
-            <td><span id="crust"></span></td>
-            <td><span id="topping"></span></td>
-            <td><span id="value"></span></td>
-            </tr>
-        </table>
+                <div class="container summary">
+                    <table>
+                        <tr class="tableHeader">
+                            <th>Quantity</th>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Topping</th>
+                            <th><strong>Total</strong></th>
+                        </tr>
+                        <td><span id="itemQuantity"></span></td>
+                        <td><span id="itemSize"></span></td>
+                        <td><span id="itemCrust"></span></td>
+                        <td><span id="itemTopping"></span></td>
+                        <td><span id="totalValue"></span></td>
+                        </tr>
+                    </table>
+                    <button value="checkout" class="btn btn-success checkOut">Checkout</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="receipt container">
+                    <table>
+                        <tr class="tableHeader">
+                            <th>Quantity</th>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Topping</th>
+                            <th><strong>Total</strong></th>
+                        </tr>
+                        <td><span id="quantity"></span></td>
+                        <td><span id="size"></span></td>
+                        <td><span id="crust"></span></td>
+                        <td><span id="topping"></span></td>
+                        <td><span id="value"></span></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
