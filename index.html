@@ -23,14 +23,15 @@
 <body>
     <div class="navbar">
         <p>My Pizza Place</p>
+        <p class="homeLink">Home</p>
     </div>
     <div class="container landing" id="landing">
         <h1>Pizza Pride</h1>
         <h3>Family, Friends $ Pizza</h3>
         <h4 id="bg-order">Make an order now</h4>
         <div class="animate">
-            <iframe src="https://giphy.com/embed/o3vJeahO5sZOA0IlB0"frameBorder="0"
-                class="giphy-embed" allowFullScreen></iframe>
+            <iframe src="https://giphy.com/embed/o3vJeahO5sZOA0IlB0" frameBorder="0" class="giphy-embed"
+                allowFullScreen></iframe>
             <p><a href="https://giphy.com/stickers/chef-pampered-o3vJeahO5sZOA0IlB0"></a></p>
         </div>
     </div>
@@ -73,8 +74,8 @@
                     <input type="number" name="pizzaNumber" id="pizzaNumber" class="form-control"
                         placeholder="-Enter the quantity-">
 
-                    <button class="btn btn-danger submit" id="pick" value="0">I WILL PICK</button>
-                    <button class="btn btn-danger submit" id="deliver" value="200">I NEED DELIVERY</button>
+                    <button class="btn btn-primary submit" id="pick" value="0">I WILL PICK</button>
+                    <button class="btn btn-primary submit" id="deliver" value="200">I NEED DELIVERY</button>
 
                 </div>
 
@@ -97,8 +98,9 @@
                     <button value="checkout" class="btn btn-success checkOut">Checkout</button>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="receipt container">
+            <div class="col-md-6 receipt">
+                <h4>RECEIPT</h4>
+                <div class="container">
                     <table id="deliveryReceipt">
                         <tr class="tableHeader">
                             <th>Quantity</th>
@@ -116,7 +118,7 @@
                         </tr>
                     </table>
                 </div>
-
+                <button class="print btn btn-primary" onclick="print()">Print</button>
             </div>
         </div>
     </div>
