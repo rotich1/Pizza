@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".summary").hide();
     $(".receipt").hide();
     $(".order-form").hide();
+    $(".print").hide();
 
     //The code below will hide the landing page and display the form to user
     $("#bg-order").on('click', function () {
@@ -40,7 +41,16 @@ $(document).ready(function () {
         $(".order-form").show();
         $(".receipt").show();
         $(".summary").hide();
+        $(".print").show();
         checkOut();
+    });
+
+    $(".print").on('click', function () {
+        window.print();
+    });
+
+    $("p.homeLink").on("click", function () {
+        location.reload();
     });
 
 });
@@ -97,12 +107,13 @@ function validateDeliver() {
         alert(noInput);
     } else {
         confirm(charge);
-        if (charge == true) {
+        if (charge) {
             $(".order-form").hide();
             $(".summary").show();
         } else {
             return false;
         }
+
     }
     if (charge) {
         $("#itemQuantity").text(quantity);
@@ -128,6 +139,8 @@ function checkOut() {
     $("#value").text(total);
 
 }
+
+
 
 //USER INTERFACE LOGIC
 var charge = "There will be an additional charge for transport";
