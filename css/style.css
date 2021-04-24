@@ -61,7 +61,7 @@ div>select, input, button {
     margin-top: 1vh;
 }
 
-.btn-danger {
+.btn-primary {
     width: 45%;
     margin-left: 3%;
 }
@@ -96,6 +96,7 @@ th {
     border: 1px solid white;
     font-weight: 600;
     transition: 0.5s;
+    margin: 5vh 15vh 0vh 15vh;
 }
 
 .checkOut:hover {
@@ -106,15 +107,57 @@ th {
 
 .receipt {
     margin-top: 10vh;
+    background-color: rgba(128, 128, 128, 0.473);
+    border: 2px solid white;
 }
 
 .summary {
     margin-top: 10vh;
+    background-color: rgba(128, 128, 128, 0.473);
+    border: 2px solid white;
+    padding: 3%;
+    border-radius: 5px;
 }
 
 iframe {
     width: 280px;
     height: 280px;
+}
+
+.print {
+    width: 50%;
+    margin: 4vh 15vh 0vh 15vh;
+    align-items: center;
+    border: 1px solid white;
+    transition: 0.7s;
+}
+
+.print:hover {
+    box-shadow: 0px 0px 3px 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: teal;
+}
+
+#pick, #deliver {
+    border: 1px solid whitesmoke;
+    transition: 0.6s;
+}
+
+#pick:hover, #deliver:hover {
+    box-shadow: 0px 0px 3px 4px;
+    background-color: teal;
+}
+
+.homeLink {
+    padding: 0vh 5vh 0vh 0vh;
+}
+
+.receipt>h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 600;
+    margin: 2%;
 }
 
 @media screen and (min-width: 1720px) {
