@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(".receipt").hide();
     $(".order-form").hide();
     $(".print").hide();
+    $(".alert").hide();
 
     //The code below will hide the landing page and display the form to user
     $("#bg-order").on('click', function () {
@@ -32,6 +33,7 @@ $(document).ready(function () {
         } else {
             $(".order-form").show();
             $(".summary").hide();
+
         }
     });
 
@@ -78,7 +80,7 @@ function validatePick() {
     let totalCost = cost * quantity;
 
     if (selectedCrust == "" || selectedToppings == "" || selectedSize == "" || quantity == "") {
-        alert(noInput);
+        $(".alert").show();
     } else {
         $(".order-form").hide();
         $(".summary").show();
@@ -104,7 +106,7 @@ function validateDeliver() {
     var cost = deliver.size + deliver.crust + deliver.topping + deliver.delivery
     let totalCost = cost * quantity;
     if (selectedCrust == "" || selectedToppings == "" || selectedSize == "" || quantity == "") {
-        alert(noInput);
+        $(".alert").show();
     } else {
         confirm(charge);
         if (charge) {
