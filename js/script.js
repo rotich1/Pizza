@@ -1,14 +1,17 @@
+//BUSINESS LOGIC
 $(document).ready(function () {
     $("#bg-order").addClass("order");
     $(".summary").hide();
     $(".receipt").hide();
     $(".order-form").hide();
 
+    //The code below will hide the landing page and display the form to user
     $("#bg-order").on('click', function () {
         $("#landing").hide();
         $(".order-form").show();
     });
 
+    //The code below executes customers inputs for those who are coming the pick their pizza
     $("#pick").on('click', function () {
 
         if (validatePick() != NaN) {
@@ -18,6 +21,8 @@ $(document).ready(function () {
             $(".summary").hide();
         }
     });
+
+    //The code below executes customers inputs for those who need delivery their pizza
 
     $("#deliver").on('click', function () {
 
@@ -29,15 +34,18 @@ $(document).ready(function () {
         }
     });
 
+    //The code below will show a receipt of what customer has ordered
+
     $(".checkOut").on('click', function () {
         $(".order-form").show();
         $(".receipt").show();
-        $(".summary").hide(); 7
+        $(".summary").hide();
         checkOut();
     });
 
 });
 
+//A function constructor
 function Total(size, crust, topping, delivery) {
     this.size = size;
     this.crust = crust;
@@ -45,7 +53,7 @@ function Total(size, crust, topping, delivery) {
     this.delivery = delivery;
 }
 
-
+//A function that executes when customers selects pick option
 function validatePick() {
     let selectedCrust = parseFloat(document.getElementById("pizza-crust").value);
     let selectedToppings = parseFloat(document.getElementById("pizza-toppings").value);
@@ -73,6 +81,7 @@ function validatePick() {
 
 }
 
+//A function that executes when customers selects delivery option
 function validateDeliver() {
     let selectedCrust = parseFloat(document.getElementById("pizza-crust").value);
     let selectedToppings = parseFloat(document.getElementById("pizza-toppings").value);
@@ -81,7 +90,6 @@ function validateDeliver() {
     let quantity = document.getElementById("pizzaNumber").value;
 
     const deliver = new Total(selectedSize, selectedCrust, selectedToppings, selectedDelivery);
-    // const deliver = new Total(selectedSize + selectedCrust + selectedToppings + delivery);
 
     var cost = deliver.size + deliver.crust + deliver.topping + deliver.delivery
     let totalCost = cost * quantity;
@@ -105,6 +113,7 @@ function validateDeliver() {
     }
 }
 
+//This code passes data to receipt table
 function checkOut() {
     let selectedCrust = parseFloat(document.getElementById("pizza-crust").value);
     let selectedToppings = parseFloat(document.getElementById("pizza-toppings").value);
@@ -120,6 +129,7 @@ function checkOut() {
 
 }
 
+//USER INTERFACE LOGIC
 var charge = "There will be an additional charge for transport";
 var noInput = "Kindly provide all fields";
 var confirmTransport = "Are you sure you don't need delivery?";
