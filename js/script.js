@@ -122,7 +122,8 @@ $(document).ready(function () {
 
     $("#deliver").on('click', function () {
 
-        if (validateDeliver() != NaN) {
+        if (validateDeliver() != NaN || validateDeliver() != null) {
+            prompt("Provide your location")
             validateDeliver();
         } else {
             $(".order-form").show();
