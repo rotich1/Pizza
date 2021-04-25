@@ -1,5 +1,5 @@
 
-## AKAN NAME
+## PIZZA ORDER
 ### A website application that generates customer receipt of pizza sales, April 2021
 #### By Kiptoo Rotich
 ## Description
@@ -7,17 +7,17 @@ This website takes user inputs, calculates the total cost of pizza which include
 ## Setup/Installation Requirements
 * Open terminal
 * Change directory to the location you want to copy the project to.
-* Clone the repo {git clone https://github.com/rotich1/delian-studio }
+* Clone the repo {git clone https://github.com/rotich1/Pizza }
 * Now you have the project in your local machine
 ## Behaviour
-| Behaviour                        |           Input           |                                                     Output |
-| -------------------------------- | :-----------------------: | ---------------------------------------------------------: |
-| Check if email format is correct |     johndoegmail.com      |                         Check your email address and retry |
-| Check if all fields and provided | Joh Doe johndoe@gmail.com | Thanks John Doe. We'll be in touch using johndoe@gmail.com |
+| Behaviour                            |      Input      |                                         Output |
+| ------------------------------------ | :-------------: | ---------------------------------------------: |
+| Check if pick up option is selected  |    I'll pick    |         Receipt is generated with total amount |
+| Check if delivery option is selected | I need delivery | There will be an additional charge to delivery |
 ### Live Site
 View [live](https://rotich1.github.io/delian-studio/)
 ## Known Bugs
-The subscriber is not actually subscribed to the business.
+The project takes one order a a time.
 ## Technologies Used
 * HTML
 * CSS
