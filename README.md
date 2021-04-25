@@ -15,7 +15,7 @@ This website takes user inputs, calculates the total cost of pizza which include
 | Check if pick up option is selected  |    I'll pick    |         Receipt is generated with total amount |
 | Check if delivery option is selected | I need delivery | There will be an additional charge to delivery |
 ### Live Site
-View [live](https://rotich1.github.io/delian-studio/)
+View [live](https://rotich1.github.io/Pizza/)
 ## Known Bugs
 The project takes one order a a time.
 ## Technologies Used
